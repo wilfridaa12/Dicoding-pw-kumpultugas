@@ -36,7 +36,18 @@
         </div>
       </div>
 
-      <script src="../script.js"></script>
+      <script src="../script.js">
+        document.getElementById("latest").addEventListener("click", updateLatest);
+        document.getElementById("oldest").addEventListener("click", updateOldest);
+
+        function updateLatest() {
+          document.getElementById("movies").style["flex-direction"] = "column-reverse";
+        }
+
+        function updateOldest() {
+          document.getElementById("movies").style["flex-direction"] = "column";
+        }
+      </script>
     </main>
     <footer>&copy; 2024: Wilfrida Sisilia</footer>
   </body>
